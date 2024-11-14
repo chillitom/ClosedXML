@@ -49,6 +49,10 @@
     <!-- Pre-6.0.0 System.IO.Packaging has a race condition https://github.com/dotnet/runtime/issues/43012 -->
     <PackageReference Include="System.IO.Packaging" Version="8.0.1" />
     <PackageReference Include="ClosedXML.Parser" Version="[1.2.0,2.0.0)" />
+    <!-- System.Net.Http overriding vulnerability in transitive dependency of RBush 3.2.0 -->
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <!-- System.Text.RegularExpressions overriding vulnerability in transitive dependency of RBush 3.2.0 -->
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" /> 
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
